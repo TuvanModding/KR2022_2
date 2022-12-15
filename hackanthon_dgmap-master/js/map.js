@@ -2,35 +2,35 @@ let map;
 
 const TuvanCities = [
   {
-    name_kyzylcity: "Кызыл",
+    name: "Кызыл",
     coords: {
       latitude: 51.7147,
       longitude: 94.4534
     }
   },
   {
-    name_turan: "Туран",
+    name: "Туран",
     coords: {
       latitude: 52.14212,
       longitude: 93.92107
     }
   },
   {
-	name_akdovurak: "Ак-Довурак",
+	name: "Ак-Довурак",
     coords: {
       latitude: 51.1833,
       longitude: 90.6
     }
   },
   {
-    name_shagonar: "Шагонар",
+    name: "Шагонар",
     coords: {
       latitude: 51.53213,
       longitude: 92.88827
     }
   },
   {
-    name_chadan: "Чадан",
+    name: "Чадан",
     coords: {
       latitude: 51.28939,
       longitude: 91.56686
@@ -40,35 +40,35 @@ const TuvanCities = [
 
 const KhakasCities = [
   {
-    name_abaza: "Абаза",
+    name: "Абаза",
     coords: {
       latitude: 52.39,
       longitude: 90.05
     }
   },
   {
-    name_abacan: "Абакан",
+    name: "Абакан",
     coords: {
       latitude: 53.43,
       longitude: 91.25
     }
   },
   {
-	name_sayanogorsk: "Саяногорск",
+	name: "Саяногорск",
     coords: {
       latitude: 53.06,
       longitude: 91.24
     }
   },
   {
-    name_sorsk: "Сорск",
+    name: "Сорск",
     coords: {
       latitude: 54.0,
       longitude: 90.15
     }
   },
   {
-    name_chernogorsk: "Черногорск",
+    name: "Черногорск",
     coords: {
       latitude: 53.49,
       longitude: 91.17
@@ -78,35 +78,35 @@ const KhakasCities = [
 
 const MongolCities = [
   {
-    name_ulanbator: "Улан-Батор",
+    name: "Улан-Батор",
     coords: {
       latitude: 47.55,
       longitude: 106.55
     }
   },
   {
-    name_erdenet: "Эрдэнэт",
+    name: "Эрдэнэт",
     coords: {
       latitude: 49.0140,
       longitude: 104.0240
     }
   },
   {
-	name_darkhan: "Дархан",
+	name: "Дархан",
     coords: {
       latitude: 49.2808,
       longitude: 105.5727
     }
   },
   {
-    name_choibalsan: "Чойбалсан",
+    name: "Чойбалсан",
     coords: {
       latitude: 48.0414,
       longitude: 114.3122
     }
   },
   {
-    name_muren: "Мурэн",
+    name: "Мурэн",
     coords: {
       latitude: 49.3815,
       longitude: 100.0941
@@ -124,7 +124,7 @@ DG.then(async function () {
     const TuvanMarker = await fetchData(item.coords.latitude, item.coords.longitude)
 
     DG.marker([TuvanMarker.latitude, TuvanMarker.longitude]).addTo(map).bindPopup(
-      `<div class="T">
+      `<div class="marker">
         <ul>
         Географические координаты:
         <li>
@@ -142,7 +142,7 @@ DG.then(async function () {
     const KhakasMarker = await fetchData(item.coords.latitude, item.coords.longitude)
 
     DG.marker([KhakasMarker.latitude, KhakasMarker.longitude]).addTo(map).bindPopup(
-      `<div class="K">
+      `<div class="marker">
         <ul>
         Географические координаты:
         <li>
