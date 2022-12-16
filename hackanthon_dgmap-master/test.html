@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>API карт 2ГИС</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/filter.js"></script>
+	<link rel="stylesheet" href="/styles/select2.min.css">
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/select2.min.js"></script>
+	<script src="/localisation/ru.js"></script>
+  </head>
+  <body>
+<select class="js-select2" name="city" placeholder="Выберите город">
+	<option value=""></option>
+	<option value="367">Абаза</option>
+	<option value="340">Абакан</option>	
+	<option value="369">Абдулино</option>	
+	<option value="370">Абинск</option>	
+	<option value="371">Агидель</option>
+</select>
+ 
+<script>
+$(document).ready(function() {
+	$('.js-select2').select2({
+		placeholder: "Выберите город",
+		maximumSelectionLength: 2,
+		language: "ru"
+	});
+});
+</script>
+  </body>
+</html>

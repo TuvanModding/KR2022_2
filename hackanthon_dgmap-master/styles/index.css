@@ -23,3 +23,6 @@
   height:   100%;
   background: rgba(30, 64, 175, 2);
 }
+.div {display:inline-block;
+        vertical-align:middle;
+        line-height: 55px;}
